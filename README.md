@@ -1,6 +1,6 @@
 # Gravitrips
 
-A simple console-based [https://en.wikipedia.org/wiki/Connect_Four](Connect Four) game implementation.
+A simple console-based [Connect Four](https://en.wikipedia.org/wiki/Connect_Four) game implementation.
 
 ## Requirements
 
