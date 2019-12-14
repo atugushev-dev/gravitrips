@@ -206,12 +206,25 @@ class Gravitrips:
 
 
 def main(argv: List[str]) -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--pieces-to-win", type=int, default=4)
-    parser.add_argument("--players", type=int, default=2)
-    parser.add_argument("--columns", type=int, default=7)
-    parser.add_argument("--rows", type=int, default=6)
-    parser.add_argument("--debug", action="store_true")
+    parser = argparse.ArgumentParser(
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter
+    )
+    parser.add_argument(
+        "--pieces-to-win",
+        type=int,
+        default=4,
+        help="A number of connected pieces required to win",
+    )
+    parser.add_argument("--players", type=int, default=2, help="Players count")
+    parser.add_argument(
+        "--columns", type=int, default=7, help="Game board columns size"
+    )
+    parser.add_argument("--rows", type=int, default=6, help="Game board rows size")
+    parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="Enter to the post-mortem debugging if raised an exception",
+    )
     args = parser.parse_args(argv)
 
     try:
